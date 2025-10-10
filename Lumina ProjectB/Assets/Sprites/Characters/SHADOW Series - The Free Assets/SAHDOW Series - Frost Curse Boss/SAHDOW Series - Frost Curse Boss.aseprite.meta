@@ -1,0 +1,2407 @@
+fileFormatVersion: 2
+guid: 2336d6d1ea5138a4e98211e4a886d88c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: SAHDOW Series - Frost Curse Boss_Frame_0
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 681
+      height: 256
+    spriteID: 25c2f840d034f1a40836ff0559d7c0c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_1
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 4
+      width: 681
+      height: 256
+    spriteID: 79de65dc9467bd64a959037e653c88b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 4}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_2
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 4
+      width: 681
+      height: 256
+    spriteID: 2489199b7514eb04aa038eb3da786f3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 4}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_3
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 4
+      width: 681
+      height: 256
+    spriteID: 7407355f05e027544a59f52305579b85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 4}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_4
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 4
+      width: 681
+      height: 256
+    spriteID: a18379f89dcdbcb4d9a15500e36aefe7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 4}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_5
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 268
+      width: 681
+      height: 256
+    spriteID: 8337eb65034574649b55ed6a98b84d1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 268}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_6
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 268
+      width: 681
+      height: 256
+    spriteID: 980a5acdfdb5cab46ab6ae1ccac4db27
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 268}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_7
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 268
+      width: 681
+      height: 256
+    spriteID: c9b504a3f6d576d44a248f3be402d3c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 268}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_8
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 268
+      width: 681
+      height: 256
+    spriteID: afcdc8e95de6ae64a82f03fd7fbd9fac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 268}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_9
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 268
+      width: 681
+      height: 256
+    spriteID: 190bdec3451288241b4968ce8c59ef7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 268}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_10
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 532
+      width: 681
+      height: 256
+    spriteID: 3bdafeb152edb8f409ade359bb69224f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 532}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_11
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 532
+      width: 681
+      height: 256
+    spriteID: d2a03e8b0e51f2240a2e88de7c897d25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 532}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_12
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 532
+      width: 681
+      height: 256
+    spriteID: e5749045152da20469064e9f8879f16d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 532}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_13
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 532
+      width: 681
+      height: 256
+    spriteID: 78e353a4f32fd124d808b2b1081c8a16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 532}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_14
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 532
+      width: 681
+      height: 256
+    spriteID: 6ccb65869e8c7294c8861ae567b562f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 532}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_15
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 796
+      width: 681
+      height: 256
+    spriteID: ad83565cd3efcc64098b26aaa30f6a16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 796}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_16
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 796
+      width: 681
+      height: 256
+    spriteID: ab395c1214974b943868f2da5e8a0067
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 796}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_17
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 796
+      width: 681
+      height: 256
+    spriteID: 9cf2ca7caa72d5243a1fc42a74eb1cf9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 796}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_18
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 796
+      width: 681
+      height: 256
+    spriteID: ee0cde9786e35b747b4ec41bb1cd6141
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 796}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_19
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 796
+      width: 681
+      height: 256
+    spriteID: 97e7ba8c173ecf4458a870103ef3ad67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 796}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_20
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1060
+      width: 681
+      height: 256
+    spriteID: f47e7c2f042c1904885178aa5b5afc72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1060}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_21
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 1060
+      width: 681
+      height: 256
+    spriteID: 62ba23e13262f9d479b213dda6ffea9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 1060}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_22
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 1060
+      width: 681
+      height: 256
+    spriteID: b25360c65b8a1f64f890bcb17a98c7b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 1060}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_23
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 1060
+      width: 681
+      height: 256
+    spriteID: 1db3ee13d2dd4034982e8b3c4d8e8ae7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 1060}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_24
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 1060
+      width: 681
+      height: 256
+    spriteID: 18b6cdd4053ac29429501c4bd0f0e110
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 1060}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_25
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1324
+      width: 681
+      height: 256
+    spriteID: 3fb81ab0f38f9d24783c827d8abfe0b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1324}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_26
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 1324
+      width: 681
+      height: 256
+    spriteID: 1301d4ee7d6055f4f8dc1efe7c586fe2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 1324}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_27
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 1324
+      width: 681
+      height: 256
+    spriteID: 97908613fc173b74b8bb4bb158e32ec1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 1324}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_28
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 1324
+      width: 681
+      height: 256
+    spriteID: 8e3c1300c8632d8459c64677c7ad0ab9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 1324}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_29
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 1324
+      width: 681
+      height: 256
+    spriteID: 27d158e9bc5c2304b87668e7e893ba99
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 1324}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_30
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1588
+      width: 681
+      height: 256
+    spriteID: 699faad7e3c6851408cbd9270b31c78d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1588}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_31
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 1588
+      width: 681
+      height: 256
+    spriteID: dc307fc0d989ada43939eba54db6b807
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 1588}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_32
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 1588
+      width: 681
+      height: 256
+    spriteID: 3939c90cf63e6d848b53917b207d7219
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 1588}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_33
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 1588
+      width: 681
+      height: 256
+    spriteID: 43c623a5e4c18024baa40e5fdd9c15ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 1588}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_34
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 1588
+      width: 681
+      height: 256
+    spriteID: ed53042c6ae113843ac7634892b0015a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 1588}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_35
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1852
+      width: 681
+      height: 256
+    spriteID: d68de55e4c1df5945bdafb43a5dff4e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1852}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_36
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 1852
+      width: 681
+      height: 256
+    spriteID: 6df1bf27d303356469e124c239945837
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 1852}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_37
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 1852
+      width: 681
+      height: 256
+    spriteID: 4a918874cb35c1b4da8d0ba1796df439
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 1852}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_38
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 1852
+      width: 681
+      height: 256
+    spriteID: 9e34022f03c6cf44482497db1b054607
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 1852}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_39
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 1852
+      width: 681
+      height: 256
+    spriteID: af24949780f72124a94ce502bf704815
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 1852}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_40
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2116
+      width: 681
+      height: 256
+    spriteID: ef47b4bb80ad48748ab3cebf02bd1706
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2116}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_41
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 2116
+      width: 681
+      height: 256
+    spriteID: a799dc52e8f4dbc44b86617ae82d766e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 2116}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_42
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 2116
+      width: 681
+      height: 256
+    spriteID: af1d78d963913af49bef53d71735f802
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 2116}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_43
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 2116
+      width: 681
+      height: 256
+    spriteID: c33964e8dd7ed2b4d9254d16fef568e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 2116}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_44
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 2116
+      width: 681
+      height: 256
+    spriteID: 50900d84ec1ef5d4d98d0c6714b13be4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 2116}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_45
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2380
+      width: 681
+      height: 256
+    spriteID: 344ca79f1cb0b194eb98c02737089246
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2380}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_46
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 2380
+      width: 681
+      height: 256
+    spriteID: caea405f4c2686547bc3ad9dfb3823df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 2380}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_47
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 2380
+      width: 681
+      height: 256
+    spriteID: d3e04a8eca01cf44996ef147dc4e3694
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 2380}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_48
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 2380
+      width: 681
+      height: 256
+    spriteID: 37a597a4ad84c4d49b05d485c6b07d9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 2380}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_49
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 2380
+      width: 681
+      height: 256
+    spriteID: 022fa7fa8eab8ec4f8634338f9254e6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 2380}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_50
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2644
+      width: 681
+      height: 256
+    spriteID: d67a2766c5710b64b8e707a682b0094b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2644}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_51
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 2644
+      width: 681
+      height: 256
+    spriteID: ffc5b493e54620a4abb91704764fd1ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 2644}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_52
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 2644
+      width: 681
+      height: 256
+    spriteID: 7f63240f405f8484f94fa6908e29f3c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 2644}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_53
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 2644
+      width: 681
+      height: 256
+    spriteID: 75fcc03bc15c7834ebb3f6f7ccde0001
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 2644}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_54
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 2644
+      width: 681
+      height: 256
+    spriteID: 6326879f3b2fa2145a2e4014faa6014c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 2644}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_55
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2908
+      width: 681
+      height: 256
+    spriteID: 6973caf6f0dc2894cafccee4c6ac43f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2908}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_56
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 2908
+      width: 681
+      height: 256
+    spriteID: 60bf6662767eeec4ebdf359adaf0ad29
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 2908}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_57
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 2908
+      width: 681
+      height: 256
+    spriteID: 5a0fa5b045708d046b41b145702f4827
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 2908}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_58
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 2908
+      width: 681
+      height: 256
+    spriteID: 2d71e3e6e48ea474798f94f2af997259
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 2908}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_59
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 2908
+      width: 681
+      height: 256
+    spriteID: 15aa8b96cb94fb24aa0bcea25de8d44c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 2908}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_60
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3172
+      width: 681
+      height: 256
+    spriteID: 5618327b383e7f1498ecca7c143e63e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3172}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_61
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 3172
+      width: 681
+      height: 256
+    spriteID: cd366a32bb08ffd47bdd41ee1e5bcf0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 3172}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_62
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 3172
+      width: 681
+      height: 256
+    spriteID: f934e402765d1a448999414f18729234
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 3172}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_63
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 3172
+      width: 681
+      height: 256
+    spriteID: 86d9f7ef96514be4da432eff8e8f8efc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 3172}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_64
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 3172
+      width: 681
+      height: 256
+    spriteID: 69a57b09f7e5eb34587fb68533b3335b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 3172}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_65
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3436
+      width: 681
+      height: 256
+    spriteID: e41a977ff44c1254295e4eca86e65c79
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3436}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_66
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 3436
+      width: 681
+      height: 256
+    spriteID: 717eb925ad5501d429d2c850a6b28f63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 3436}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_67
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 3436
+      width: 681
+      height: 256
+    spriteID: e5362f63a1069eb4292207f90b310d56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 3436}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_68
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 3436
+      width: 681
+      height: 256
+    spriteID: 6b4bde3142d3478488947251c73c847e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 3436}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_69
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 3436
+      width: 681
+      height: 256
+    spriteID: 6fd46e6674a6a18468a0d6b1fbf2ffaf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 3436}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_70
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3700
+      width: 681
+      height: 256
+    spriteID: 1a341f4ed0a9e8840959db2c3bdbf76c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3700}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_71
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 3700
+      width: 681
+      height: 256
+    spriteID: 26161f8a02409b84c8096a270950309c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 3700}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_72
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 3700
+      width: 681
+      height: 256
+    spriteID: e0c4052d85de88b4693f740d7e32ce8b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 3700}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_73
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 3700
+      width: 681
+      height: 256
+    spriteID: 905532ff00dc2cb4ea007c949b0f198c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 3700}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_74
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 3700
+      width: 681
+      height: 256
+    spriteID: f87f6d694446fac49806f769a17f56b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 3700}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_75
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3964
+      width: 681
+      height: 256
+    spriteID: fafaab1e21909534582501ae70976a36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3964}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_76
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 693
+      y: 3964
+      width: 681
+      height: 256
+    spriteID: dc8a91f65aaf45746959b14d412fc081
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 693, y: 3964}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_77
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1382
+      y: 3964
+      width: 681
+      height: 256
+    spriteID: 997a9f0874863fe4fa6cfe47a04d6a53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1382, y: 3964}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_78
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2071
+      y: 3964
+      width: 681
+      height: 256
+    spriteID: 848dcc4b9eea4e244bedc8ab01f9b93b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2071, y: 3964}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_79
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2760
+      y: 3964
+      width: 681
+      height: 256
+    spriteID: 1b87f8208931fbf418c0a5ca03a3d441
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2760, y: 3964}
+  - name: SAHDOW Series - Frost Curse Boss_Frame_80
+    originalName: 
+    pivot: {x: 0.61894274, y: 0.33984375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4228
+      width: 681
+      height: 256
+    spriteID: 406498d8c92fbf448977ad94a2945f22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4228}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -903249369
+    name: SAHDOW Series - Frost Curse Boss
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: SAHDOW Series - Frost Curse Boss_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 25c2f840d034f1a40836ff0559d7c0c4
+    - name: SAHDOW Series - Frost Curse Boss_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 79de65dc9467bd64a959037e653c88b2
+    - name: SAHDOW Series - Frost Curse Boss_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 2489199b7514eb04aa038eb3da786f3f
+    - name: SAHDOW Series - Frost Curse Boss_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 7407355f05e027544a59f52305579b85
+    - name: SAHDOW Series - Frost Curse Boss_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: a18379f89dcdbcb4d9a15500e36aefe7
+    - name: SAHDOW Series - Frost Curse Boss_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 8337eb65034574649b55ed6a98b84d1b
+    - name: SAHDOW Series - Frost Curse Boss_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 980a5acdfdb5cab46ab6ae1ccac4db27
+    - name: SAHDOW Series - Frost Curse Boss_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: c9b504a3f6d576d44a248f3be402d3c2
+    - name: SAHDOW Series - Frost Curse Boss_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: afcdc8e95de6ae64a82f03fd7fbd9fac
+    - name: SAHDOW Series - Frost Curse Boss_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 190bdec3451288241b4968ce8c59ef7b
+    - name: SAHDOW Series - Frost Curse Boss_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 3bdafeb152edb8f409ade359bb69224f
+    - name: SAHDOW Series - Frost Curse Boss_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: d2a03e8b0e51f2240a2e88de7c897d25
+    - name: SAHDOW Series - Frost Curse Boss_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: e5749045152da20469064e9f8879f16d
+    - name: SAHDOW Series - Frost Curse Boss_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 78e353a4f32fd124d808b2b1081c8a16
+    - name: SAHDOW Series - Frost Curse Boss_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 6ccb65869e8c7294c8861ae567b562f6
+    - name: SAHDOW Series - Frost Curse Boss_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: ad83565cd3efcc64098b26aaa30f6a16
+    - name: SAHDOW Series - Frost Curse Boss_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: ab395c1214974b943868f2da5e8a0067
+    - name: SAHDOW Series - Frost Curse Boss_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 9cf2ca7caa72d5243a1fc42a74eb1cf9
+    - name: SAHDOW Series - Frost Curse Boss_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: ee0cde9786e35b747b4ec41bb1cd6141
+    - name: SAHDOW Series - Frost Curse Boss_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 97e7ba8c173ecf4458a870103ef3ad67
+    - name: SAHDOW Series - Frost Curse Boss_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: f47e7c2f042c1904885178aa5b5afc72
+    - name: SAHDOW Series - Frost Curse Boss_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 62ba23e13262f9d479b213dda6ffea9d
+    - name: SAHDOW Series - Frost Curse Boss_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: b25360c65b8a1f64f890bcb17a98c7b6
+    - name: SAHDOW Series - Frost Curse Boss_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 1db3ee13d2dd4034982e8b3c4d8e8ae7
+    - name: SAHDOW Series - Frost Curse Boss_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 18b6cdd4053ac29429501c4bd0f0e110
+    - name: SAHDOW Series - Frost Curse Boss_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 3fb81ab0f38f9d24783c827d8abfe0b3
+    - name: SAHDOW Series - Frost Curse Boss_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 1301d4ee7d6055f4f8dc1efe7c586fe2
+    - name: SAHDOW Series - Frost Curse Boss_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 97908613fc173b74b8bb4bb158e32ec1
+    - name: SAHDOW Series - Frost Curse Boss_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 8e3c1300c8632d8459c64677c7ad0ab9
+    - name: SAHDOW Series - Frost Curse Boss_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 27d158e9bc5c2304b87668e7e893ba99
+    - name: SAHDOW Series - Frost Curse Boss_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 699faad7e3c6851408cbd9270b31c78d
+    - name: SAHDOW Series - Frost Curse Boss_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: dc307fc0d989ada43939eba54db6b807
+    - name: SAHDOW Series - Frost Curse Boss_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 3939c90cf63e6d848b53917b207d7219
+    - name: SAHDOW Series - Frost Curse Boss_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 43c623a5e4c18024baa40e5fdd9c15ed
+    - name: SAHDOW Series - Frost Curse Boss_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: ed53042c6ae113843ac7634892b0015a
+    - name: SAHDOW Series - Frost Curse Boss_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: d68de55e4c1df5945bdafb43a5dff4e6
+    - name: SAHDOW Series - Frost Curse Boss_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 6df1bf27d303356469e124c239945837
+    - name: SAHDOW Series - Frost Curse Boss_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 4a918874cb35c1b4da8d0ba1796df439
+    - name: SAHDOW Series - Frost Curse Boss_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 9e34022f03c6cf44482497db1b054607
+    - name: SAHDOW Series - Frost Curse Boss_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: af24949780f72124a94ce502bf704815
+    - name: SAHDOW Series - Frost Curse Boss_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: ef47b4bb80ad48748ab3cebf02bd1706
+    - name: SAHDOW Series - Frost Curse Boss_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: a799dc52e8f4dbc44b86617ae82d766e
+    - name: SAHDOW Series - Frost Curse Boss_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: af1d78d963913af49bef53d71735f802
+    - name: SAHDOW Series - Frost Curse Boss_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: c33964e8dd7ed2b4d9254d16fef568e6
+    - name: SAHDOW Series - Frost Curse Boss_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 50900d84ec1ef5d4d98d0c6714b13be4
+    - name: SAHDOW Series - Frost Curse Boss_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 344ca79f1cb0b194eb98c02737089246
+    - name: SAHDOW Series - Frost Curse Boss_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: caea405f4c2686547bc3ad9dfb3823df
+    - name: SAHDOW Series - Frost Curse Boss_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: d3e04a8eca01cf44996ef147dc4e3694
+    - name: SAHDOW Series - Frost Curse Boss_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 37a597a4ad84c4d49b05d485c6b07d9a
+    - name: SAHDOW Series - Frost Curse Boss_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 022fa7fa8eab8ec4f8634338f9254e6f
+    - name: SAHDOW Series - Frost Curse Boss_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: d67a2766c5710b64b8e707a682b0094b
+    - name: SAHDOW Series - Frost Curse Boss_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: ffc5b493e54620a4abb91704764fd1ef
+    - name: SAHDOW Series - Frost Curse Boss_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 7f63240f405f8484f94fa6908e29f3c4
+    - name: SAHDOW Series - Frost Curse Boss_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 75fcc03bc15c7834ebb3f6f7ccde0001
+    - name: SAHDOW Series - Frost Curse Boss_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 6326879f3b2fa2145a2e4014faa6014c
+    - name: SAHDOW Series - Frost Curse Boss_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 6973caf6f0dc2894cafccee4c6ac43f4
+    - name: SAHDOW Series - Frost Curse Boss_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 60bf6662767eeec4ebdf359adaf0ad29
+    - name: SAHDOW Series - Frost Curse Boss_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 5a0fa5b045708d046b41b145702f4827
+    - name: SAHDOW Series - Frost Curse Boss_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 2d71e3e6e48ea474798f94f2af997259
+    - name: SAHDOW Series - Frost Curse Boss_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 15aa8b96cb94fb24aa0bcea25de8d44c
+    - name: SAHDOW Series - Frost Curse Boss_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 5618327b383e7f1498ecca7c143e63e3
+    - name: SAHDOW Series - Frost Curse Boss_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: cd366a32bb08ffd47bdd41ee1e5bcf0f
+    - name: SAHDOW Series - Frost Curse Boss_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: f934e402765d1a448999414f18729234
+    - name: SAHDOW Series - Frost Curse Boss_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 86d9f7ef96514be4da432eff8e8f8efc
+    - name: SAHDOW Series - Frost Curse Boss_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 69a57b09f7e5eb34587fb68533b3335b
+    - name: SAHDOW Series - Frost Curse Boss_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: e41a977ff44c1254295e4eca86e65c79
+    - name: SAHDOW Series - Frost Curse Boss_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 717eb925ad5501d429d2c850a6b28f63
+    - name: SAHDOW Series - Frost Curse Boss_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: e5362f63a1069eb4292207f90b310d56
+    - name: SAHDOW Series - Frost Curse Boss_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 6b4bde3142d3478488947251c73c847e
+    - name: SAHDOW Series - Frost Curse Boss_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 6fd46e6674a6a18468a0d6b1fbf2ffaf
+    - name: SAHDOW Series - Frost Curse Boss_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 1a341f4ed0a9e8840959db2c3bdbf76c
+    - name: SAHDOW Series - Frost Curse Boss_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 26161f8a02409b84c8096a270950309c
+    - name: SAHDOW Series - Frost Curse Boss_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: e0c4052d85de88b4693f740d7e32ce8b
+    - name: SAHDOW Series - Frost Curse Boss_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 905532ff00dc2cb4ea007c949b0f198c
+    - name: SAHDOW Series - Frost Curse Boss_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: f87f6d694446fac49806f769a17f56b6
+    - name: SAHDOW Series - Frost Curse Boss_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: fafaab1e21909534582501ae70976a36
+    - name: SAHDOW Series - Frost Curse Boss_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: dc8a91f65aaf45746959b14d412fc081
+    - name: SAHDOW Series - Frost Curse Boss_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 997a9f0874863fe4fa6cfe47a04d6a53
+    - name: SAHDOW Series - Frost Curse Boss_Frame_78
+      frameIndex: 78
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 848dcc4b9eea4e244bedc8ab01f9b93b
+    - name: SAHDOW Series - Frost Curse Boss_Frame_79
+      frameIndex: 79
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 1b87f8208931fbf418c0a5ca03a3d441
+    - name: SAHDOW Series - Frost Curse Boss_Frame_80
+      frameIndex: 80
+      cellRect:
+        x: -292
+        y: -87
+        width: 681
+        height: 256
+      spriteId: 406498d8c92fbf448977ad94a2945f22
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 259, y: 99}
