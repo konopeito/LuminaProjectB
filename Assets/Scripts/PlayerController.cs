@@ -29,12 +29,15 @@ public class PlayerController : MonoBehaviour
     public LayerMask wallLayer;
 
     [Header("Game Over")]
-    public GameOverManager gameOverManager; // Assign in Inspector
+    public GameOverManager gameOverManager;
 
     [Header("Bounds")]
     public bool useBounds = true;
-    public Vector2 minBounds; // bottom-left corner
-    public Vector2 maxBounds; // top-right corner
+    public Vector2 minBounds;
+    public Vector2 maxBounds;
+
+    [Header("Respawn Settings")]
+    public Vector3 respawnPosition;
 
     [Header("State Tracking")]
     private int jumpCount = 0;
@@ -44,6 +47,79 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
 
     private Vector2 moveInput;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        respawnPosition = transform.position;
+    }
+
+    void Update()
+    {
+        if (gameOverManager != null && gameOverManager.isPaused)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            return;
+        }
+
+        HandleMovement();
+        GroundCheck();
+        WallCheck();
+        LedgeCheck();
+        UpdateAnimations();
+
+        if (useBounds)
+        {
+            float clampedX = Mathf.Clamp(transform.position.x, minBounds.x, maxBounds.x);
+            float clampedY = Mathf.Clamp(transform.position.y, minBounds.y, maxBounds.y);
+            transform.position = new Vector3(clampedX, clampedY, transform.position.z);
+        }
+    }
+
+    #region Movement
+    private void HandleMovement()
+    {
+        bool canMove = !(anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerRoll") ||
+                         anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerLongRoll") ||
+                         anim.GetBool("IsDashing"));
+
+        if (canMove)
+            rb.velocity = new Vector2(moveInput.x * moveSpeed, rb.velocity.y);
+
+        if (moveInput.x > 0.1f) isFacingRight = true;
+        else if (moveInput.x < -0.1f) isFacingRight = false;
+
+        sprite.flipX = !isFacingRight;
+    }
+    #endregion
+
+    #region Respawn
+    public void SetCheckpoint(Vector3 newCheckpoint)
+    {
+        respawnPosition = newCheckpoint;
+    }
+
+    public void Respawn()
+    {
+        transform.position = respawnPosition;
+        rb.velocity = Vector2.zero;
+        jumpCount = 0;
+        canDoubleJump = true;
+
+        Animator anim = GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.Rebind();
+            anim.Update(0f);
+        }
+
+        PlayerLight light = GetComponent<PlayerLight>();
+        if (light != null)
+            light.ResetLight();
+    }
+    #endregion
 
     #region Input Callbacks
     public void OnMove(InputAction.CallbackContext context)
@@ -96,56 +172,6 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("IsDashing", false);
         }
-    }
-
-    // Add similar checks for other input callbacks if needed...
-    #endregion
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
-    }
-
-    void Update()
-    {
-        // Stop all movement if GameOver is active
-        if (gameOverManager != null && gameOverManager.isPaused)
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            return;
-        }
-
-        HandleMovement();
-        GroundCheck();
-        WallCheck();
-        LedgeCheck();
-        UpdateAnimations();
-
-        // Apply character bounds
-        if (useBounds)
-        {
-            float clampedX = Mathf.Clamp(transform.position.x, minBounds.x, maxBounds.x);
-            float clampedY = Mathf.Clamp(transform.position.y, minBounds.y, maxBounds.y);
-            transform.position = new Vector3(clampedX, clampedY, transform.position.z);
-        }
-    }
-
-    #region Movement
-    private void HandleMovement()
-    {
-        bool canMove = !(anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerRoll") ||
-                         anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerLongRoll") ||
-                         anim.GetBool("IsDashing"));
-
-        if (canMove)
-            rb.velocity = new Vector2(moveInput.x * moveSpeed, rb.velocity.y);
-
-        if (moveInput.x > 0.1f) isFacingRight = true;
-        else if (moveInput.x < -0.1f) isFacingRight = false;
-
-        sprite.flipX = !isFacingRight;
     }
     #endregion
 
