@@ -21,9 +21,6 @@ public class PlayerLight : MonoBehaviour
     [Header("UI")]
     public PlayerHealthUI healthUI;
 
-    [Header("GameOver")]
-    public GameOverManager gameOverManager;
-
     private SpriteRenderer lightSprite;
     private float currentIntensity;
     private float targetScale;
@@ -45,9 +42,8 @@ public class PlayerLight : MonoBehaviour
 
     void Update()
     {
-        if (isDead || (gameOverManager != null && gameOverManager.isPaused)) return;
+        if (isDead || (GameMenusManager.Instance != null && GameMenusManager.Instance.isPaused)) return;
 
-        // Gradually dim light
         currentIntensity -= dimSpeed * Time.deltaTime;
         currentIntensity = Mathf.Clamp(currentIntensity, minIntensity, maxIntensity);
 
@@ -55,7 +51,6 @@ public class PlayerLight : MonoBehaviour
         targetScale = Mathf.Lerp(minScale, maxScale, currentIntensity / maxIntensity);
         SmoothScale();
 
-        // Update hearts UI (split intensity across 3 hearts)
         if (healthUI != null)
         {
             float percentPerHeart = 1f / 3f;
@@ -66,11 +61,8 @@ public class PlayerLight : MonoBehaviour
             }
         }
 
-        // Trigger death if light fully depleted
         if (currentIntensity <= minIntensity)
-        {
             Die(false);
-        }
     }
 
     public void CollectLight()
@@ -79,8 +71,6 @@ public class PlayerLight : MonoBehaviour
 
         currentIntensity += collectAmount;
         currentIntensity = Mathf.Clamp(currentIntensity, minIntensity, maxIntensity);
-
-        // Pulse the light outward briefly
         targetScale = Mathf.Min(maxScale * collectPulseScale, maxScale * 1.3f);
     }
 
@@ -111,32 +101,31 @@ public class PlayerLight : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        Animator anim = GetComponent<Animator>();
-        if (anim != null)
-            anim.SetTrigger("Death");
+        GetComponent<Animator>()?.SetTrigger("Death");
 
-        // Trigger full heart depletion animation
-        if (healthUI != null)
-            StartCoroutine(healthUI.AnimateAllHeartsDeplete());
+        // Empty hearts immediately
+        healthUI?.ResetHearts();
+
+        // Trigger Game Over
+        GameMenusManager.Instance?.TriggerGameOver();
 
         if (isPitDeath)
         {
-            PlayerController controller = GetComponent<PlayerController>();
-            if (controller != null)
-                controller.Respawn();
+            GetComponent<PlayerController>()?.Respawn();
             return;
         }
 
-        StartCoroutine(ShowGameOverAfterDeath(anim));
+        // Don't respawn immediately for normal deaths
+        // Respawn will be triggered from Game Over menu if desired
     }
+
 
     public void ResetLight()
     {
         isDead = false;
-
+        healthUI?.ResetHearts();
         if (healthUI != null)
-            healthUI.ResetHearts();
-
+            healthUI.gameObject.SetActive(true);
         StartCoroutine(FadeInLight());
     }
 
@@ -166,22 +155,5 @@ public class PlayerLight : MonoBehaviour
         targetScale = maxScale;
         UpdateLight();
         SmoothScale();
-    }
-
-    private IEnumerator ShowGameOverAfterDeath(Animator anim)
-    {
-        float animLength = 0.5f;
-        if (anim != null)
-            animLength = anim.GetCurrentAnimatorStateInfo(0).length;
-
-        float timer = 0f;
-        while (timer < animLength)
-        {
-            timer += Time.unscaledDeltaTime;
-            yield return null;
-        }
-
-        if (gameOverManager != null)
-            gameOverManager.TriggerGameOver();
     }
 }

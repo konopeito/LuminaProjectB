@@ -1,21 +1,41 @@
 using UnityEngine;
+using System.Collections;
 
-[RequireComponent(typeof(BoxCollider2D))]
 public class DeathZone : MonoBehaviour
 {
-    private void Reset()
-    {
-        BoxCollider2D box = GetComponent<BoxCollider2D>();
-        box.isTrigger = true;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController player = collision.GetComponent<PlayerController>();
-        if (player != null)
+        PlayerLight playerLight = collision.GetComponent<PlayerLight>();
+        PlayerController playerController = collision.GetComponent<PlayerController>();
+
+        if (playerLight != null && playerController != null)
         {
-            // Call respawn in PlayerController at last checkpoint
-            player.Respawn();
+            // Trigger death animation & stop movement
+            playerController.OnDie();
+
+            // Disable player input/movement immediately
+            playerController.enabled = false;
+
+            // Start the death sequence: hearts animation then Game Over
+            StartCoroutine(HandleDeathSequence(playerLight, playerController));
+        }
+    }
+
+    private IEnumerator HandleDeathSequence(PlayerLight playerLight, PlayerController playerController)
+    {
+        // Animate all hearts depleting above head
+        if (playerLight.healthUI != null)
+        {
+            yield return StartCoroutine(playerLight.healthUI.AnimateAllHeartsDeplete());
+        }
+
+        // Optional: keep player frozen here or fade out screen
+        // Could add delay if needed: yield return new WaitForSeconds(0.5f);
+
+        // Trigger Game Over
+        if (GameMenusManager.Instance != null)
+        {
+            GameMenusManager.Instance.TriggerGameOver();
         }
     }
 

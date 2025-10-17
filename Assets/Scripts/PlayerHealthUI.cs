@@ -31,6 +31,10 @@ public class PlayerHealthUI : MonoBehaviour
 
         originalScale = transform.localScale;
         canvasGroup.alpha = 0f;
+
+        // Auto-assign player if missing
+        if (player == null)
+            player = FindObjectOfType<PlayerController>()?.transform;
     }
 
     void LateUpdate()
@@ -52,6 +56,9 @@ public class PlayerHealthUI : MonoBehaviour
         hearts[heartIndex].sprite = heartStages[stageIndex];
     }
 
+    /// <summary>
+    /// Animate all hearts depleting and fading out above the player.
+    /// </summary>
     public IEnumerator AnimateAllHeartsDeplete()
     {
         if (hearts == null || hearts.Length == 0) yield break;
@@ -76,8 +83,31 @@ public class PlayerHealthUI : MonoBehaviour
         canvasGroup.alpha = 0f;
     }
 
+    /// <summary>
+    /// Reset hearts to full and hide UI.
+    /// </summary>
+    public void ResetHearts()
+    {
+        if (hearts == null || hearts.Length == 0 || heartStages == null || heartStages.Length == 0)
+            return;
+
+        foreach (Image heart in hearts)
+            heart.sprite = heartStages[0];
+
+        transform.localScale = originalScale;
+        canvasGroup.alpha = 0f;
+    }
+
+    /// <summary>
+    /// Optional: animate a single heart depleting for individual damage events.
+    /// </summary>
     public IEnumerator AnimateHeartDeplete(int heartIndex)
     {
+        if (hearts == null || hearts.Length == 0 || heartIndex < 0 || heartIndex >= hearts.Length) yield break;
+
+        int emptyStage = heartStages.Length - 1;
+        hearts[heartIndex].sprite = heartStages[emptyStage];
+
         transform.localScale = originalScale * popupScale;
         canvasGroup.alpha = 1f;
 
@@ -89,18 +119,6 @@ public class PlayerHealthUI : MonoBehaviour
             canvasGroup.alpha = Mathf.Lerp(1f, 0f, t / fadeDuration);
             yield return null;
         }
-
-        transform.localScale = originalScale;
-        canvasGroup.alpha = 0f;
-    }
-
-    public void ResetHearts()
-    {
-        if (hearts == null || hearts.Length == 0 || heartStages == null || heartStages.Length == 0)
-            return;
-
-        foreach (Image heart in hearts)
-            heart.sprite = heartStages[0];
 
         transform.localScale = originalScale;
         canvasGroup.alpha = 0f;

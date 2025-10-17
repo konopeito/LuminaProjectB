@@ -28,9 +28,6 @@ public class PlayerController : MonoBehaviour
     public float ledgeCheckDistance = 0.5f;
     public LayerMask wallLayer;
 
-    [Header("Game Over")]
-    public GameOverManager gameOverManager;
-
     [Header("Bounds")]
     public bool useBounds = true;
     public Vector2 minBounds;
@@ -39,12 +36,24 @@ public class PlayerController : MonoBehaviour
     [Header("Respawn Settings")]
     public Vector3 respawnPosition;
 
-    [Header("State Tracking")]
+    [Header("Climb Settings")]
+    public float climbSpeed = 3f;
+    public LayerMask ladderLayer;
+    public Transform ladderCheck;
+    public Transform ladderTopCheck; // Top of ladder
+    public float ladderCheckRadius = 0.2f;
+    public Vector3 nextStageSpawn; // assign later
+
+    // --- State Tracking ---
     private int jumpCount = 0;
     private bool canDoubleJump = true;
     private bool isTouchingWall = false;
     private bool isLedgeDetected = false;
     private bool isFacingRight = true;
+    private bool isDead = false;
+    private bool isRolling = false;
+    private bool isClimbing = false;
+    private float climbInput = 0f;
 
     private Vector2 moveInput;
 
@@ -58,79 +67,107 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (gameOverManager != null && gameOverManager.isPaused)
+        if (isDead || (GameMenusManager.Instance != null && GameMenusManager.Instance.isPaused && !GameMenusManager.Instance.IsGameOverActive()))
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
             return;
         }
 
-        HandleMovement();
         GroundCheck();
         WallCheck();
         LedgeCheck();
+        HandleMovement();
         UpdateAnimations();
-
-        if (useBounds)
-        {
-            float clampedX = Mathf.Clamp(transform.position.x, minBounds.x, maxBounds.x);
-            float clampedY = Mathf.Clamp(transform.position.y, minBounds.y, maxBounds.y);
-            transform.position = new Vector3(clampedX, clampedY, transform.position.z);
-        }
+        ApplyBounds();
     }
 
     #region Movement
     private void HandleMovement()
     {
-        bool canMove = !(anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerRoll") ||
-                         anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerLongRoll") ||
-                         anim.GetBool("IsDashing"));
+        // --- Climbing overrides everything ---
+        if (isClimbing)
+        {
+            rb.velocity = new Vector2(0, climbInput * climbSpeed);
 
-        if (canMove)
-            rb.velocity = new Vector2(moveInput.x * moveSpeed, rb.velocity.y);
+            // Check if player reached the top of the ladder
+            if (ladderTopCheck != null && transform.position.y >= ladderTopCheck.position.y)
+            {
+                transform.position = nextStageSpawn;
+                isClimbing = false;
+                anim.SetBool("IsClimbing", false);
+                rb.gravityScale = 1f;
+            }
+
+            return;
+        }
+
+        // --- Rolling ---
+        if (isRolling)
+        {
+            float rollVel = anim.GetInteger("RollType") == 1 ? rollSpeed : longRollSpeed;
+            rb.velocity = new Vector2((isFacingRight ? 1 : -1) * rollVel, rb.velocity.y);
+
+            if (Mathf.Abs(moveInput.x) < 0.1f)
+            {
+                isRolling = false;
+                anim.SetInteger("RollType", 0);
+            }
+            return;
+        }
+
+        // --- Normal Movement ---
+        rb.velocity = new Vector2(moveInput.x * moveSpeed, rb.velocity.y);
 
         if (moveInput.x > 0.1f) isFacingRight = true;
         else if (moveInput.x < -0.1f) isFacingRight = false;
 
         sprite.flipX = !isFacingRight;
     }
+
+    private void ApplyBounds()
+    {
+        if (!useBounds) return;
+        float clampedX = Mathf.Clamp(transform.position.x, minBounds.x, maxBounds.x);
+        float clampedY = Mathf.Clamp(transform.position.y, minBounds.y, maxBounds.y);
+        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
+    }
     #endregion
 
     #region Respawn
-    public void SetCheckpoint(Vector3 newCheckpoint)
-    {
-        respawnPosition = newCheckpoint;
-    }
+    public void SetCheckpoint(Vector3 newCheckpoint) => respawnPosition = newCheckpoint;
 
     public void Respawn()
     {
+        isDead = false;
         transform.position = respawnPosition;
         rb.velocity = Vector2.zero;
         jumpCount = 0;
         canDoubleJump = true;
 
-        Animator anim = GetComponent<Animator>();
         if (anim != null)
         {
             anim.Rebind();
             anim.Update(0f);
         }
 
-        PlayerLight light = GetComponent<PlayerLight>();
-        if (light != null)
-            light.ResetLight();
+        GetComponent<PlayerLight>()?.ResetLight();
+        PlayerHealthUI healthUI = GetComponent<PlayerLight>()?.healthUI;
+        if (healthUI != null) healthUI.ResetHearts();
+
+        enabled = true;
     }
     #endregion
 
     #region Input Callbacks
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (gameOverManager != null && gameOverManager.isPaused) return;
+        if (isDead || GameMenusManager.Instance?.isPaused == true) return;
         moveInput = context.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (gameOverManager != null && gameOverManager.isPaused) return;
+        if (isDead || GameMenusManager.Instance?.isPaused == true || isClimbing) return;
         if (!context.performed) return;
 
         if (IsGrounded())
@@ -141,7 +178,6 @@ public class PlayerController : MonoBehaviour
         else if (canDoubleJump && jumpCount < maxJumps)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            anim.SetTrigger("DoubleJump");
             jumpCount++;
             if (jumpCount >= maxJumps) canDoubleJump = false;
         }
@@ -149,19 +185,18 @@ public class PlayerController : MonoBehaviour
 
     public void OnRoll(InputAction.CallbackContext context)
     {
-        if (gameOverManager != null && gameOverManager.isPaused) return;
+        if (isDead || GameMenusManager.Instance?.isPaused == true || isClimbing) return;
         if (!context.performed) return;
 
         int rollType = Keyboard.current.leftShiftKey.isPressed ? 2 : 1;
         anim.SetInteger("RollType", rollType);
-
-        float rollVel = (rollType == 1) ? rollSpeed : longRollSpeed;
-        rb.velocity = new Vector2((isFacingRight ? 1 : -1) * rollVel, rb.velocity.y);
+        anim.SetTrigger("Roll");
+        isRolling = true;
     }
 
     public void OnDash(InputAction.CallbackContext context)
     {
-        if (gameOverManager != null && gameOverManager.isPaused) return;
+        if (isDead || GameMenusManager.Instance?.isPaused == true || isClimbing) return;
 
         if (context.performed)
         {
@@ -172,6 +207,83 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("IsDashing", false);
         }
+    }
+
+    public void OnClimb(InputAction.CallbackContext context)
+    {
+        if (isDead || GameMenusManager.Instance?.isPaused == true) return;
+
+        // Use float (0 or 1) for key press instead of Vector2
+        climbInput = context.ReadValue<float>();
+
+        if (IsNearLadder() && climbInput > 0.1f) // pressing key
+        {
+            if (!isClimbing)
+            {
+                isClimbing = true;
+                anim.SetBool("IsClimbing", true);
+
+                // Snap player X to ladder
+                Collider2D ladder = Physics2D.OverlapCircle(ladderCheck.position, ladderCheckRadius, ladderLayer);
+                if (ladder != null)
+                    transform.position = new Vector3(ladder.transform.position.x, transform.position.y, transform.position.z);
+
+                rb.gravityScale = 0f;
+            }
+        }
+        else
+        {
+            if (isClimbing)
+            {
+                isClimbing = false;
+                anim.SetBool("IsClimbing", false);
+                rb.gravityScale = 1f;
+            }
+        }
+    }
+
+
+    // --- ATTACKS ---
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (isDead || GameMenusManager.Instance?.isPaused == true || !context.performed) return;
+        anim.SetTrigger("Attack");
+    }
+
+    public void OnAttack2(InputAction.CallbackContext context)
+    {
+        if (isDead || GameMenusManager.Instance?.isPaused == true || !context.performed) return;
+        anim.SetTrigger("Attack2");
+    }
+
+    public void OnRangedAttack(InputAction.CallbackContext context)
+    {
+        if (isDead || GameMenusManager.Instance?.isPaused == true || !context.performed) return;
+        anim.SetTrigger("RangedAttack");
+    }
+
+    public void OnJumpAttack(InputAction.CallbackContext context)
+    {
+        if (isDead || GameMenusManager.Instance?.isPaused == true || !context.performed) return;
+        anim.SetTrigger("JumpAttack");
+    }
+
+    public void OnSpecialAttack(InputAction.CallbackContext context)
+    {
+        if (isDead || GameMenusManager.Instance?.isPaused == true || !context.performed) return;
+        anim.SetTrigger("SpecialAttack");
+    }
+
+    public void OnPush(InputAction.CallbackContext context)
+    {
+        if (isDead || GameMenusManager.Instance?.isPaused == true || !context.performed) return;
+        anim.SetBool("IsPushing", true);
+    }
+
+    public void OnPull(InputAction.CallbackContext context)
+    {
+        if (isDead || GameMenusManager.Instance?.isPaused == true || !context.performed) return;
+        anim.SetBool("IsPulling", true);
     }
     #endregion
 
@@ -187,20 +299,18 @@ public class PlayerController : MonoBehaviour
 
     private void WallCheck()
     {
-        isTouchingWall = Physics2D.Raycast(transform.position,
-            Vector2.right * (isFacingRight ? 1 : -1),
-            wallCheckDistance,
-            wallLayer);
+        isTouchingWall = Physics2D.Raycast(transform.position, Vector2.right * (isFacingRight ? 1 : -1), wallCheckDistance, wallLayer);
     }
 
     private void LedgeCheck()
     {
-        RaycastHit2D hit = Physics2D.Raycast(ledgeCheck.position,
-            Vector2.right * (isFacingRight ? 1 : -1),
-            ledgeCheckDistance,
-            wallLayer);
-
+        RaycastHit2D hit = Physics2D.Raycast(ledgeCheck.position, Vector2.right * (isFacingRight ? 1 : -1), ledgeCheckDistance, wallLayer);
         isLedgeDetected = hit.collider != null;
+    }
+
+    private bool IsNearLadder()
+    {
+        return Physics2D.OverlapCircle(ladderCheck.position, ladderCheckRadius, ladderLayer);
     }
     #endregion
 
@@ -212,23 +322,15 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("IsGrounded", IsGrounded());
         anim.SetBool("IsWallSliding", !IsGrounded() && isTouchingWall && rb.velocity.y < 0);
         anim.SetBool("IsLedgeGrabbing", isLedgeDetected);
-        anim.SetBool("IsClimbing", anim.GetBool("IsClimbing"));
-        anim.SetBool("IsPushing", anim.GetBool("IsPushing"));
-        anim.SetBool("IsPulling", anim.GetBool("IsPulling"));
     }
     #endregion
 
     private bool IsGrounded() => Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-    #region Gizmos
-    void OnDrawGizmosSelected()
+    public void OnDie()
     {
-        if (!useBounds) return;
-
-        Gizmos.color = Color.yellow;
-        Vector3 center = new Vector3((minBounds.x + maxBounds.x) / 2, (minBounds.y + maxBounds.y) / 2, 0);
-        Vector3 size = new Vector3(maxBounds.x - minBounds.x, maxBounds.y - minBounds.y, 0);
-        Gizmos.DrawWireCube(center, size);
+        isDead = true;
+        rb.velocity = Vector2.zero;
+        anim.SetTrigger("Death");
     }
-    #endregion
 }
