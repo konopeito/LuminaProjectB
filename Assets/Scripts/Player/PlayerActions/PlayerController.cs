@@ -606,6 +606,67 @@ public class PlayerController : MonoBehaviour
         minBounds = newMin;
         maxBounds = newMax;
     }
+
+
+    // ==========================
+    // NPC Shop Interaction
+    // ==========================
+    [Header("NPC Shop Interaction")]
+    private NPCShop currentShop; // Reference to the shop player is near
+
+    // Called by Input System "Interact" action
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+
+        if (currentShop != null)
+            currentShop.Interact();
+    }
+
+    // Called by Input System "Shop Up" action
+    public void OnShopUp(InputAction.CallbackContext context)
+    {
+        if (!context.performed || currentShop == null) return;
+        currentShop.NavigateUp();
+    }
+
+    // Called by Input System "Shop Down" action
+    public void OnShopDown(InputAction.CallbackContext context)
+    {
+        if (!context.performed || currentShop == null) return;
+        currentShop.NavigateDown();
+    }
+
+    // Called by Input System "Shop Buy" action
+    public void OnShopBuy(InputAction.CallbackContext context)
+    {
+        if (!context.performed || currentShop == null) return;
+        currentShop.AttemptPurchase();
+    }
+
+    // Called by Input System "Shop Close" action
+    public void OnShopClose(InputAction.CallbackContext context)
+    {
+        if (!context.performed || currentShop == null) return;
+        currentShop.CloseShop();
+    }
+
+    // Detect when player enters/exits shop trigger
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        NPCShop shop = collision.GetComponent<NPCShop>();
+        if (shop != null)
+            currentShop = shop;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        NPCShop shop = collision.GetComponent<NPCShop>();
+        if (shop != null && currentShop == shop)
+            currentShop = null;
+    }
+
+
 }
 #endregion
 

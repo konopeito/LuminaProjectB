@@ -69,7 +69,7 @@ public class PlayerLight : MonoBehaviour
             Die(false);
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
         if (healthUI == null) return;
 
@@ -164,7 +164,7 @@ public class PlayerLight : MonoBehaviour
         }
     }
 
-    private IEnumerator FadeOutLight()
+    public IEnumerator FadeOutLight()
     {
         float duration = 1f;
         float startIntensity = currentIntensity;
@@ -200,7 +200,7 @@ public class PlayerLight : MonoBehaviour
         StartCoroutine(FadeInLight());
     }
 
-    private IEnumerator FadeInLight()
+    public IEnumerator FadeInLight()
     {
         float duration = 1.2f;
         float timer = 0f;
@@ -225,4 +225,46 @@ public class PlayerLight : MonoBehaviour
         UpdateLight();
         SmoothScale();
     }
+   
+    public float CurrentIntensity => currentIntensity; // Read-only property
+    public void ReduceLight(float amount)
+    {
+        // Reduce intensity
+        currentIntensity = Mathf.Max(minIntensity, currentIntensity - amount);
+
+        // Permanently reduce minIntensity
+        minIntensity = Mathf.Min(minIntensity, currentIntensity);
+
+        // Update UI hearts
+        UpdateUI();
+
+        // Start gradual scale shrink
+        float newTargetScale = Mathf.Max(minScale, lightCircle.transform.localScale.x - (amount / maxIntensity) * maxScale);
+        StartCoroutine(ShrinkLightGradually(newTargetScale, 0.5f)); // shrink over 0.5 seconds
+    }
+
+    private IEnumerator ShrinkLightGradually(float newScale, float duration)
+    {
+        if (lightCircle == null) yield break;
+
+        float startScale = lightCircle.transform.localScale.x;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            float scale = Mathf.Lerp(startScale, newScale, t);
+            lightCircle.transform.localScale = new Vector3(scale, scale, 1f);
+            yield return null;
+        }
+
+        // Ensure final scale is exact
+        lightCircle.transform.localScale = new Vector3(newScale, newScale, 1f);
+
+        // Update targetScale so SmoothScale() continues working normally
+        targetScale = newScale;
+    }
+
+
 }

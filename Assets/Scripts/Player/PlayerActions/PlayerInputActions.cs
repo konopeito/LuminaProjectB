@@ -188,6 +188,51 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShopUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""069cf711-e595-42e7-8a69-06e517a5650c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShopDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""d5922a11-8560-436b-9951-b51cc5238f40"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""e467fd7c-290a-4330-88cc-80016f627309"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CloseShop"",
+                    ""type"": ""Button"",
+                    ""id"": ""2009a14e-ee6d-49c7-8ad3-0c68e211f0b3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuyItem"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a125b9c-67b2-4c14-a810-1f319643565c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -454,6 +499,72 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Use Item"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4381e141-4fcc-46c5-b31d-ae3bf89355a0"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShopUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""73ef44aa-279e-4871-bdf5-1593747a4a5e"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShopDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1cc6823c-130f-41a4-a7e7-7cd7bebb01b4"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db1dbc5f-c84a-4dc7-a73c-090d2aba4338"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseShop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f4310646-a473-43d9-aefc-f80d9a54dba5"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuyItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d0cac73f-9fe3-4c1e-81e7-87aa803a5bc6"",
+                    ""path"": ""<Keyboard>/numpadEnter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuyItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -480,6 +591,11 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Pickup = m_Player.FindAction("Pickup", throwIfNotFound: true);
         m_Player_Drop = m_Player.FindAction("Drop", throwIfNotFound: true);
         m_Player_UseItem = m_Player.FindAction("Use Item", throwIfNotFound: true);
+        m_Player_ShopUp = m_Player.FindAction("ShopUp", throwIfNotFound: true);
+        m_Player_ShopDown = m_Player.FindAction("ShopDown", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_CloseShop = m_Player.FindAction("CloseShop", throwIfNotFound: true);
+        m_Player_BuyItem = m_Player.FindAction("BuyItem", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -559,6 +675,11 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Pickup;
     private readonly InputAction m_Player_Drop;
     private readonly InputAction m_Player_UseItem;
+    private readonly InputAction m_Player_ShopUp;
+    private readonly InputAction m_Player_ShopDown;
+    private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_CloseShop;
+    private readonly InputAction m_Player_BuyItem;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -581,6 +702,11 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Pickup => m_Wrapper.m_Player_Pickup;
         public InputAction @Drop => m_Wrapper.m_Player_Drop;
         public InputAction @UseItem => m_Wrapper.m_Player_UseItem;
+        public InputAction @ShopUp => m_Wrapper.m_Player_ShopUp;
+        public InputAction @ShopDown => m_Wrapper.m_Player_ShopDown;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @CloseShop => m_Wrapper.m_Player_CloseShop;
+        public InputAction @BuyItem => m_Wrapper.m_Player_BuyItem;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -644,6 +770,21 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @UseItem.started += instance.OnUseItem;
             @UseItem.performed += instance.OnUseItem;
             @UseItem.canceled += instance.OnUseItem;
+            @ShopUp.started += instance.OnShopUp;
+            @ShopUp.performed += instance.OnShopUp;
+            @ShopUp.canceled += instance.OnShopUp;
+            @ShopDown.started += instance.OnShopDown;
+            @ShopDown.performed += instance.OnShopDown;
+            @ShopDown.canceled += instance.OnShopDown;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @CloseShop.started += instance.OnCloseShop;
+            @CloseShop.performed += instance.OnCloseShop;
+            @CloseShop.canceled += instance.OnCloseShop;
+            @BuyItem.started += instance.OnBuyItem;
+            @BuyItem.performed += instance.OnBuyItem;
+            @BuyItem.canceled += instance.OnBuyItem;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -702,6 +843,21 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @UseItem.started -= instance.OnUseItem;
             @UseItem.performed -= instance.OnUseItem;
             @UseItem.canceled -= instance.OnUseItem;
+            @ShopUp.started -= instance.OnShopUp;
+            @ShopUp.performed -= instance.OnShopUp;
+            @ShopUp.canceled -= instance.OnShopUp;
+            @ShopDown.started -= instance.OnShopDown;
+            @ShopDown.performed -= instance.OnShopDown;
+            @ShopDown.canceled -= instance.OnShopDown;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @CloseShop.started -= instance.OnCloseShop;
+            @CloseShop.performed -= instance.OnCloseShop;
+            @CloseShop.canceled -= instance.OnCloseShop;
+            @BuyItem.started -= instance.OnBuyItem;
+            @BuyItem.performed -= instance.OnBuyItem;
+            @BuyItem.canceled -= instance.OnBuyItem;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -739,5 +895,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnPickup(InputAction.CallbackContext context);
         void OnDrop(InputAction.CallbackContext context);
         void OnUseItem(InputAction.CallbackContext context);
+        void OnShopUp(InputAction.CallbackContext context);
+        void OnShopDown(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnCloseShop(InputAction.CallbackContext context);
+        void OnBuyItem(InputAction.CallbackContext context);
     }
 }

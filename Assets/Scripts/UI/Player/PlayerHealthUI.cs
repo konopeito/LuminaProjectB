@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -134,4 +134,109 @@ public class PlayerHealthUI : MonoBehaviour
         transform.localScale = originalScale;
         if (canvasGroup != null) canvasGroup.alpha = 0f;
     }
+
+    // ==================== Poison Heart Extension ====================
+    [Header("Poison Settings")]
+    public Color poisonColor = new Color(0.6f, 0f, 0.6f, 1f); // purple tint
+    public float poisonPulseSpeed = 2f; // speed of pulse effect
+
+    private bool isPoisoned = false;
+    private float poisonTimer = 0f;
+
+    void Update()
+    {
+        // Existing LateUpdate() behavior runs above
+        HandlePoisonPulse();
+    }
+
+    public void StartPoisonEffect(float duration)
+    {
+        if (!isPoisoned)
+            StartCoroutine(PoisonCoroutine(duration));
+    }
+
+    IEnumerator PoisonCoroutine(float duration)
+    {
+        isPoisoned = true;
+        poisonTimer = 0f;
+
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        isPoisoned = false;
+        ResetHeartColors();
+    }
+
+    void HandlePoisonPulse()
+    {
+        if (!isPoisoned || hearts == null) return;
+
+        // Pulsing purple effect
+        float pulse = (Mathf.Sin(Time.time * poisonPulseSpeed) + 1f) / 2f; // 0 → 1
+        Color tint = Color.Lerp(Color.white, poisonColor, pulse);
+
+        foreach (var heart in hearts)
+        {
+            if (heart != null)
+                heart.color = tint;
+        }
+    }
+
+    void ResetHeartColors()
+    {
+        if (hearts == null) return;
+        foreach (var heart in hearts)
+        {
+            if (heart != null)
+                heart.color = Color.white;
+        }
+    }
+    public IEnumerator PoisonHeartEffect(float duration)
+    {
+        if (hearts == null || hearts.Length == 0) yield break;
+
+        float timer = 0f;
+        Color poisonColor = new Color(0.6f, 0f, 0.6f, 1f); // Purple tint
+
+        // Capture original colors to restore later
+        Color[] originalColors = new Color[hearts.Length];
+        for (int i = 0; i < hearts.Length; i++)
+            if (hearts[i] != null) originalColors[i] = hearts[i].color;
+
+        // Random phase offsets for asynchronous pulsing
+        float[] phaseOffsets = new float[hearts.Length];
+        for (int i = 0; i < hearts.Length; i++)
+            phaseOffsets[i] = Random.Range(0f, Mathf.PI * 2f);
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            for (int i = 0; i < hearts.Length; i++)
+            {
+                if (hearts[i] != null)
+                {
+                    // Only pulse hearts that are not fully empty
+                    int stageIndex = System.Array.IndexOf(heartStages, hearts[i].sprite);
+                    if (stageIndex >= 0 && stageIndex < heartStages.Length - 1)
+                    {
+                        float pulse = (Mathf.Sin(Time.time * 4f + phaseOffsets[i]) + 1f) / 2f;
+                        hearts[i].color = Color.Lerp(originalColors[i], poisonColor, pulse);
+                    }
+                }
+            }
+            yield return null;
+        }
+
+        // Reset all heart colors
+        for (int i = 0; i < hearts.Length; i++)
+            if (hearts[i] != null)
+                hearts[i].color = originalColors[i];
+    }
+
+
+
 }
